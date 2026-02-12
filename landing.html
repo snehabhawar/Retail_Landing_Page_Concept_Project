@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Winter Tire Inspection | Promotional Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #0F1B2A;
+      overflow-x: hidden;
+    }
+
+    section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    button {
+      background-color: #D71920;
+      color: white;
+      padding: 16px 35px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background-color: #b9151a;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(15,27,42,0.85), rgba(15,27,42,0.85)),
+                  url('https://images.unsplash.com/photo-1519681393784-d120267933ba') center/cover no-repeat;
+      color: white;
+      padding: 160px 20px;
+    }
+
+    .risks {
+      background-color: #0F1B2A;
+      color: white;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      color: #0F1B2A;
+      padding: 45px;
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .education {
+      background-color: #F5F5F5;
+    }
+
+    .offer {
+      background-color: #D71920;
+      color: white;
+      padding: 140px 20px;
+    }
+
+    .offer button {
+      background: white;
+      color: #D71920;
+      font-weight: 800;
+    }
+
+    .trust {
+      background-color: #E6F2FF;
+    }
+
+    .final {
+      background-color: #0F1B2A;
+      color: white;
+      padding: 140px 20px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .card { width: 100%; }
+      button { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero reveal">
+    <h1>Winter Starts at Your Tires</h1>
+    <p>Drive safely this season with a professional winter inspection.</p>
+    <button>Book Inspection</button>
+  </section>
+
+  <section class="risks reveal">
+    <h2>Winter Road Risks</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Reduced Traction</h3>
+        <p>Icy roads demand maximum grip.</p>
+      </div>
+      <div class="card">
+        <h3>Cold Temperatures</h3>
+        <p>Low temperatures reduce tire pressure.</p>
+      </div>
+      <div class="card">
+        <h3>Worn Tread</h3>
+        <p>Less tread means longer stopping distances.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="education reveal">
+    <h2>5 Signs You Need an Inspection</h2>
+    <ul style="max-width:600px;margin:40px auto;text-align:left;">
+      <li>Tire pressure warning light</li>
+      <li>Uneven tread wear</li>
+      <li>Sliding during braking</li>
+      <li>Tires over 5 years old</li>
+      <li>No recent seasonal inspection</li>
+    </ul>
+  </section>
+
+  <section class="offer reveal">
+    <h2>Limited-Time Offer</h2>
+    <p>Free Inspection + $20 Off Service</p>
+    <button>Schedule Now</button>
+  </section>
+
+  <section class="trust reveal">
+    <h2>Trusted By Thousands</h2>
+    <p>Certified technicians. Same-day service. Satisfaction guaranteed.</p>
+  </section>
+
+  <section class="final reveal">
+    <h2>Stay Safe This Winter</h2>
+    <button>Book Today</button>
+  </section>
+
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
+

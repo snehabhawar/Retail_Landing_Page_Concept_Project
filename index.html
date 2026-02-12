@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Retail Landing Page Concept | Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #F8F9FB;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 100px 10%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      max-width: 700px;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    .hero {
+      background: #0F1B2A;
+      color: white;
+      text-align: center;
+      padding: 140px 10%;
+    }
+
+    .hero span {
+      color: #D71920;
+    }
+
+    .divider {
+      width: 80px;
+      height: 4px;
+      background: #D71920;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      flex: 1;
+      min-width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .cta {
+      text-align: center;
+      background: #D71920;
+      color: white;
+    }
+
+    .cta button {
+      margin-top: 30px;
+      padding: 15px 40px;
+      border: none;
+      font-weight: 700;
+      background: white;
+      color: #D71920;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .cta button:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <h1>Retail Landing Page <span>Concept Project</span></h1>
+    <p>Independent spec project demonstrating conversion-focused layout, visual hierarchy, and responsive front-end development.</p>
+    <p style="margin-top:20px;font-size:0.9rem;">
+      *This is a conceptual project created for portfolio purposes and is not affiliated with the brand shown.*
+    </p>
+  </section>
+
+  <section>
+    <div class="divider"></div>
+    <h2>Project Overview</h2>
+    <p><strong>Role:</strong> Designer & Developer</p>
+    <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+    <p><strong>Focus:</strong> Retail promotion strategy & conversion-driven layout</p>
+  </section>
+
+  <section>
+    <div class="divider"></div>
+    <h2>The Strategy</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Visual Hierarchy</h3>
+        <p>High-contrast sections guide users from awareness to action.</p>
+      </div>
+      <div class="card">
+        <h3>Urgency & Emotion</h3>
+        <p>Winter risk messaging builds tension before presenting the solution.</p>
+      </div>
+      <div class="card">
+        <h3>Conversion Focus</h3>
+        <p>Clear, repeated calls-to-action drive booking intent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>View The Live Landing Page</h2>
+    <button onclick="window.location.href='landing.html'">
+      Open Landing Page
+    </button>
+  </section>
+
+</body>
+</html>
